@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Congratulations Card</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="overlay"></div>
+
+    <div class="card">
+
+        <img src="clsu.png" class="logo">
+
+        <div class="title">
+            CONGRATULATIONS
+        </div>
+
+        <div class="name">
+            SALVIEJO, CRISTINE GATTOC
+        </div>
+
+        <div class="course">
+            Bachelor of Science in Management Accounting
+        </div>
+
+        <div class="school">
+            Central Luzon State University
+        </div>
+
+        <div class="batch">
+            "BATCH 2026"
+        </div>
+
+        <button class="open-btn" onclick="openPopup()">
+            OPEN MESSAGE
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= POPUP ================= -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-content">
+
+        <div class="message-card" id="messageCard">
+
+            <div class="message-title">
+                Congratulations!
+            </div>
+
+            <div class="message-container">
+
+                <div class="message-text">
+
+                    First of all, I want to say congratulations, Ate!
+                    <br><br>
+
+                    I know there were times you felt like you were falling,
+                    especially way back in December 2024 if I’m not mistaken.
+                    There were moments of doubt, pressure, and exhaustion,
+                    but even then, you didn’t stop.
+                    You chose to keep going, to keep fighting, and to
+                    believe in yourself even when things were hard.
+                    <br><br>
+
+                    And now look at you, you made it. Not because it was easy,
+                    but because you were strong enough to continue even when
+                    it wasn’t.
+                    I’m really proud of you, Ate. All the effort,
+                    patience, and sacrifices you made were never wasted.
+                    <br><br>
+
+                    You deserve this success, and I hope you take time to
+                    celebrate it, smile, and finally breathe a little easier.
+                    This is just one of many victories ahead of you.
+                    <br><br>
+
+                    Remember, bunso is always proud of you.
+
+                </div>
+
+                <img src="pic.jpg" class="side-image">
+
+            </div>
+
+        </div>
+
+        <button class="close-btn" onclick="closePopup()">
+            I Love you 
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:black;
+}
+
+/* ================= BACKGROUND ================= */
+
+.main{
+    width:100vw;
+    height:100vh;
+
+    background:url("main.jpeg") center/cover no-repeat;
+
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,0.5);
+}
+
+/* ================= GLASS CARD ================= */
+
+.card{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:760px;
+    height:460px;
+
+    background:rgba(255,255,255,0.12);
+
+    border:2px solid rgba(255,255,255,0.3);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:35px;
+
+    text-align:center;
+
+    color:white;
+
+    padding-top:40px;
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid white;
+}
+
+/* ================= TEXT ================= */
+
+.title{
+    margin-top:20px;
+
+    font-size:32px;
+
+    font-family:"Lucida Calligraphy", cursive;
+}
+
+.name{
+    margin-top:20px;
+
+    font-size:25px;
+
+    font-weight:bold;
+}
+
+.course{
+    margin-top:15px;
+
+    font-size:18px;
+}
+
+.school{
+    margin-top:10px;
+
+    font-size:17px;
+
+    font-style:italic;
+
+    color:#D5F5E3;
+}
+
+.batch{
+    margin-top:15px;
+
+    font-size:16px;
+
+    font-weight:bold;
+}
+
+/* ================= BUTTON ================= */
+
+.open-btn{
+    margin-top:30px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#27ae60;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.open-btn:hover{
+    transform:scale(1.05);
+}
+
+/* ================= POPUP ================= */
+
+.popup{
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.7);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+.popup-content{
+    width:900px;
+    height:600px;
+
+    background:#0b1f3a;
+
+    border-radius:20px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* ================= MESSAGE CARD ================= */
+
+.message-card{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:800px;
+    height:450px;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    padding:30px;
+}
+
+/* ================= CONFETTI ================= */
+
+.confetti{
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+    from{
+        transform:translateY(-100px);
+    }
+
+    to{
+        transform:translateY(600px);
+    }
+}
+
+/* ================= MESSAGE CONTENT ================= */
+
+.message-title{
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#0b1f3a;
+
+    margin-bottom:20px;
+}
+
+.message-container{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.message-text{
+    width:450px;
+
+    color:#1a1a1a;
+
+    font-size:12px;
+
+    line-height:1.6;
+}
+
+.side-image{
+    width:260px;
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+.close-btn{
+    position:absolute;
+
+    bottom:25px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1e90ff;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.close-btn:hover{
+    opacity:0.9;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .card{
+        width:90%;
+        height:auto;
+
+        padding:20px;
+    }
+
+    .popup-content{
+        width:95%;
+        height:95%;
+    }
+
+    .message-card{
+        width:95%;
+        height:auto;
+    }
+
+    .message-container{
+        flex-direction:column;
+    }
+
+    .message-text{
+        width:100%;
+    }
+
+    .side-image{
+        margin-top:20px;
+    }
+}
